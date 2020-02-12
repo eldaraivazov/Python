@@ -1,7 +1,7 @@
 import sqlite3
 con = sqlite3.connect("Store.db")
 cur = con.cursor()
-cur.execute('''create table orders
+cur.execute('''CREATE TABLE orders
                              (order_num INTEGER PRIMARY KEY,
                               order_date FLOAT,
                               customers_id INTEGER,
@@ -9,14 +9,13 @@ cur.execute('''create table orders
                               FOREIGN KEY (customers_id) REFERENCES customers(customers_id),
                               FOREIGN KEY (prod_id) REFERENCES products(prod_id))''')
 
-
-cur.execute(''' create table products
+cur.execute(''' CREATE TABLE products
                               (prod_id INTEGER PRIMARY KEY,
                                vend_id INTEGER,
                                prod_name TEXT,
                                prod_price FLOAT,
                                prod_desc TEXT''')
-cur.execute(''' create table customers
+cur.execute(''' CREATE TABLE customers
                               (customers_id INTEGER PRIMARY KEY,
                                customers_name TEXT,
                                customers_age INTEGER,
