@@ -14,7 +14,7 @@ cur.execute(''' CREATE TABLE products
                                vend_id INTEGER,
                                prod_name TEXT,
                                prod_price FLOAT,
-                               prod_desc TEXT''')
+                               prod_desc TEXT)''')
 cur.execute(''' CREATE TABLE customers
                               (customers_id INTEGER PRIMARY KEY,
                                customers_name TEXT,
